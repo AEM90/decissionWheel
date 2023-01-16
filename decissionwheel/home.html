@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" />
+	<script type="text/javascript" src="../jquery-3.6.3.min.js"></script>
+</head>
+<body>
+
+  <div id="wheelContainer" class="centered_mid">
+    <input type="button" value="spin" id='spin' hidden/>
+    <canvas id="canvas" width="500" height="500" onclick="spin()"></canvas>
+  </div>
+
+  <div class="centered_mid">
+    <input type="text" id="inputField">
+    <button onclick="addToList()" id="addItem">Add</button>
+    <br>
+    <ul id="myList"></ul>
+    <br>
+    <button onclick="changeList();removeElem();">Save</button>
+  </div>
+
+  <script type="text/javascript" src="circle.js"></script>
+
+</body>
+</html>

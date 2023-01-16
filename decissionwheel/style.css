@@ -1,0 +1,14 @@
+.centered_mid {
+	text-align: center;
+}
+
+#myList {
+	list-style: none;
+}
+
+
+.centered_mid > button, .centered_mid > ul, .centered_mid > ul > li {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
