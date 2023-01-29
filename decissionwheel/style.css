@@ -1,3 +1,8 @@
+
+#subbody{
+    min-width: 500px;
+}
+
 .centered_mid {
 	text-align: center;
 }
@@ -7,8 +12,102 @@
 }
 
 
-.centered_mid > button, .centered_mid > ul, .centered_mid > ul > li {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
+#save_button {
+	background-color: #59788E;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	font-size: 1.4em;
+    color: var(--fontcolor);;
+}
+
+
+fieldset {
+    font-size: 1em;
+    padding: 0.5em;
+    border: none;
+}
+
+
+#inputField {
+    margin-right: 0;
+    border-radius: 0.6em 0 0 0.6em;
+    font-size: inherit;
+    padding: 0.3em 0.4em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #f90;
+    background-color: #fff;
+
+}
+
+#addItem {
+    margin-left: 0;
+    border-radius: 0 0.6em 0.6em 0;
+    background-color: #aef;
+    font-size: inherit;
+    padding: 0.3em 0.4em;
+    margin: 0.1em 0.2em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #f90;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#addItem:active {
+    background-color: rgba(200, 170, 160, 0.5);
+    outline: none;
+}
+
+.deleteBtn {
+ 	border: none;
+ 	background: none;
+ 	height: 1vw;
+ 	width: 1vw;
+ 	text-align: left;
+ 	cursor: pointer;
+ 	
+}
+
+li {
+	margin-bottom: 3.3vw;
+}
+
+#myList {
+	position: absolute;
+	top: 100px;
+	font-size: 18px;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: left;
+}
+
+#title_here {
+    @media (max-width: 501px) {
+        min-width: 500px;
+        left: calc(50% - 250px);
+    }
+    @media (min-width: 502px) {
+        width: 42vw;
+        left: calc(50% - 21vw);
+    }
+
+    position: relative;
+    text-align: center;
+    top: 2vw;
+
+}
+
+#title_here h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+}
+
+#title_here h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1em;
 }

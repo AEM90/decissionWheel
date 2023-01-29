@@ -1,4 +1,5 @@
-var options = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose"];
+
+options = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose"];  
 
 var startAngle = 0;
 var arc = Math.PI / (options.length / 2);
@@ -39,8 +40,9 @@ function addToList() {
   });
 
   // Append the new list item to the list element
-  ul.appendChild(li);
   ul.appendChild(deleteBtn);
+  ul.appendChild(li);
+  
 
   // Clear the input field
   inputField.value = "";
@@ -62,6 +64,7 @@ function changeList() {
   const ul = document.getElementById('myList');
   const liElements = ul.querySelectorAll('li');
   liElements.forEach((li, index) => options[index] = li.textContent);
+  drawRouletteWheel();
 }
 
 /*     const stringArray = Array.from(liElements).map(li => li.textContent); */
@@ -105,7 +108,7 @@ function drawRouletteWheel() {
     ctx.strokeStyle = "white";
     ctx.lineWidth = 3;
 
-    ctx.font = 'bold 14px Verdana';
+    ctx.font = 'bold 14px Oswald';
 
     for(var i = 0; i < options.length; i++) {
       var angle = startAngle + i * arc;
@@ -188,7 +191,6 @@ function removeLi() {
 
 }
 
-
 /* enter new items with enter */
 var input = document.getElementById("inputField");
 input.addEventListener("keyup", function(event) {
@@ -199,4 +201,56 @@ input.addEventListener("keyup", function(event) {
 });
 
 
+
 drawRouletteWheel();
+
+
+
+// Code Sammlung
+
+/* 
+// load stored List after refreshing the page
+window.onload = function() {
+  let storedList = retrieveListFromStorage();
+  if (options.includes("Lose")) {
+    delete options;
+  };
+  options = storedList;
+  drawRouletteWheel();
+};
+
+// create a list to make items accessable after refresh
+function deleteInitialOptions(){
+  myFunc = function(){}; 
+  var list = options;
+
+};
+
+function saveListToStorage(item) {
+  list.push(item);
+  localStorage.setItem("list", JSON.stringify(list));
+}
+
+function retrieveListFromStorage() {
+  var storedList = JSON.parse(localStorage.getItem("list"));
+  console.log(storedList);
+  return storedList;
+}
+
+// Example usage
+document.getElementById("save-button").addEventListener("click", function() {
+  saveListToStorage("item1");
+});
+
+document.getElementById("retrieve-button").addEventListener("click", function() {
+  retrieveListFromStorage();
+});
+
+
+
+
+
+
+
+
+*/

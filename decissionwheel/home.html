@@ -2,26 +2,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="template.css" rel="stylesheet" />
 	<link href="style.css" rel="stylesheet" />
 	<script type="text/javascript" src="../jquery-3.6.3.min.js"></script>
+  
 </head>
 <body>
+<!-- template -->
+    <div id="navbar">
+      <ul>
+        <li><span id="navbartitle"><a href="www.babathings.com"> Babathings</a></span></li>
+        <!--<li><a href="#">Home</a></li>-->
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="centered_mid">
+      <ul id="myList"></ul>
+    </div>
+    <div id="subbody">
+      <div id="title_here">
+        <h1> Decission Wheel</h1>
+        <h4> what to drink, eat, play or watch </h4>
+      </div>
 
-  <div id="wheelContainer" class="centered_mid">
-    <input type="button" value="spin" id='spin' hidden/>
-    <canvas id="canvas" width="500" height="500" onclick="spin()"></canvas>
-  </div>
+      <div id="wheelContainer" class="centered_mid">
+        <input type="button" value="spin" id='spin' hidden/>
+        <canvas id="canvas" width="500" height="500" onclick="spin()"></canvas>
+      </div>
 
-  <div class="centered_mid">
-    <input type="text" id="inputField">
-    <button onclick="addToList()" id="addItem">Add</button>
-    <br>
-    <ul id="myList"></ul>
-    <br>
-    <button onclick="changeList();removeElem();">Save</button>
-  </div>
+      <div class="centered_mid">
+        <fieldset> 
+          <input type="text" id="inputField"">
+          <button onclick="addToList();saveListToStorage();deleteInitialOptions();" id="addItem">Add</button>
+        </fieldset>
+        <button onclick="changeList();removeElem();" id="save_button">Update</button>
+      </div>
 
-  <script type="text/javascript" src="circle.js"></script>
+      <script type="text/javascript">
+        var input = document.getElementById("inputField");
+        input.focus();
+      </script>
+      <script type="text/javascript" src="circle.js"></script>
+
+    </div>
+
+    <div id="footer">
+      Copyright &copy; Dudul
+    </div>
+<!-- template ende -->
+
 
 </body>
 </html>
